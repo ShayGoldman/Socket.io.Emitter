@@ -1,0 +1,127 @@
+html, body {
+    font: 14px "Segoe UI", Helvetica, Arial, sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-flow: column;
+}
+
+.work-area {
+    flex: 1 1 auto;
+    display: flex;
+    flex-flow: row;
+}
+
+.no-select {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
+.bluish {
+    color: #419EFF;
+}
+
+.main-header {
+    padding: 3px 24px;
+    border-bottom: 1px solid #eeeeee;
+    flex: 0 1 auto;
+}
+
+.main-header h1 {
+    display: inline-block;
+    margin-right: 6px;
+}
+
+.events, .content {
+    border-right: 1px solid #eeeeee;
+    padding: 12px;
+}
+
+.events .header,
+.content .header {
+    font-weight: 200;
+    cursor: default;
+}
+
+.events .server-data input {
+    border: none;
+    border-bottom: 1px solid rgba(65, 158, 255, 0.4);
+    margin: auto 6px;
+    padding: 3px 6px;
+    cursor: pointer;
+    color: #419EFF;
+}
+
+.events .server-data label {
+    font-weight: 400;
+}
+
+.events .server-data .submit {
+    float: right;
+    border: 1px solid transparent;
+    background: transparent;
+    color: black;
+}
+
+.events .server-data .submit:hover {
+    color: #419EFF;
+}
+
+.events .server-data .autocomplete-fix {
+    display: inline-block;
+    padding: 0px;
+}
+
+.events .server-data .autocomplete input {
+    width: 100%;
+}
+
+.events .server-data .autocomplete-list {
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    padding: 3px;
+    margin-top: 3px;
+    margin-left: 6px;
+    background: white;
+    border: 1px solid rgba(237, 237, 237, 0.4);
+}
+
+.events .server-data .suggestion {
+    padding: 3px;
+}
+
+.events .server-data .suggestion:hover {
+    color: #419EFF;
+    cursor: pointer;
+}
+
+.events .previous {
+    list-style: none;
+    font-size: 14px;
+}
+
+.events .previous .cached-event {
+    padding: 6px 3px;
+}
+
+.events .previous .cached-event.hovered {
+    color: #419EFF;
+    cursor: pointer;
+}
+
+.events .previous .cached-event.hovered i{
+    color: #419EFF;
+}
+
+.events .previous .cached-event i {
+    color: transparent;
+}
+

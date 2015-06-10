@@ -1,0 +1,30 @@
+a:hover,
+a:active {
+  outline: 0;
+  color: #419EFF;
+}
+
+ul>li{
+	list-style:none;
+}
+
+/* Generic classes */
+.hide { /* Hide stuff without resorting to display:none; */
+	visibility: hidden !important;
+	width: 0 !important;
+	height: 0 !important;
+	line-height: 0 !important;
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+.hide:after { /* Hide stuff without resorting to display:none; */
+	visibility: hidden !important;
+	width: 0 !important;
+	height: 0 !important;
+	line-height: 0 !important;
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+

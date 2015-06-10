@@ -1,0 +1,50 @@
+<div class="row main-header no-select">
+    <h1>Socket.IO Events Emitter</h1>
+    <img ng-show="isEmitting" src="../css/images/loading.gif">
+</div>
+
+<section class="row work-area">
+    <div class="col-md-3 events no-select">
+        <h2 class="header bluish">Event Data</h2>
+        <form class="server-data">
+            <span class="row">
+                <label class="col-md-offset-1 col-md-3">Event name</label>
+                <autocomplete class="col-md-6 autocomplete-fix" attr-placeholder="s3.list" ng-model="eventName" data="eventsEmitting"></autocomplete>
+            </span>
+            <span class="row">
+                <label class="col-md-offset-1 col-md-3">Payload</label><input class="col-md-6" type="text" placeholder="{}" ng-model="eventPayload"/>
+            </span>
+            <span class="row">
+
+                <input class="submit" type="submit" ng-click="emit()" value="Emit">
+            </span>
+        </form>
+
+        <h2 class="header" ng-hide='eventsCacheSent.length == 0'>Events Sent</h2>
+        <div class="row">
+            <ul class="previous col-md-10 col-md-offset-1">
+                <li ng-repeat='event in eventsCacheSent' class="cached-event" ng-class='{ hovered: this.hovered }' ng-mouseenter="this.hovered = true;" ng-mouseleave="this.hovered = false;">
+                    <i class="fa fa-caret-right"></i>
+                    <span ng-click="reloadFromCache(event)">{{ event.time + ' - ' + event.name }}</span>
+                </li>
+            </ul>
+        </div>
+
+        <h2 class="header" ng-hide='eventsCacheRecieved.length == 0'>Events Received</h2>
+        <div class="row">
+            <ul class="previous col-md-10 col-md-offset-1">
+                <li ng-repeat='event in eventsCacheRecieved' class="cached-event" ng-class='{ hovered: this.hovered }' ng-mouseenter="this.hovered = true;" ng-mouseleave="this.hovered = false;">
+                    <i class="fa fa-caret-right"></i>
+                    <span ng-click="reloadFromCache(event)">{{ event.time + ' - ' + event.name }}</span>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="col-md-9 content bluish">
+        <h2 class="header no-select">Content</h2>
+        <json-formatter json="responseJSON" open="1"></json-formatter>
+    </div>
+
+</section>

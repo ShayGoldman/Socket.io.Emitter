@@ -1,5 +1,5 @@
 # Socket.io.Emitter
-A simple proxy used to test Socket.io based servers which allows to review the payloads in a convenient JSON viewer
+A simple proxy used to test Socket.io based servers which allows to review payloads in a convenient JSON viewer
 
 # Usage
 
